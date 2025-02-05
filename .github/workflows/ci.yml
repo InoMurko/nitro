@@ -52,7 +52,7 @@ jobs:
       - name: Install wasm-ld
         run: |
           sudo apt-get update && sudo apt-get install -y lld-14
-          sudo ln -s /usr/bin/wasm-ld-14 /usr/local/bin/wasm-ld
+          [ ! -e /usr/local/bin/wasm-ld ] && sudo ln -s /usr/bin/wasm-ld-14 /usr/local/bin/wasm-ld
 
       - name: Install rust stable
         uses: dtolnay/rust-toolchain@stable
