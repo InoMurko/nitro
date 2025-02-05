@@ -9,11 +9,12 @@ on:
     branches:
       - master
       - develop
+      - sysrex/test_ci
 
 jobs:
   test:
     name: Go Tests
-    runs-on: ubuntu-8
+    runs-on: self-hosted
 
     # Creates a redis container for redis tests
     services:
