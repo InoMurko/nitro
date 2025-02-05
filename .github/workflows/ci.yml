@@ -43,10 +43,6 @@ jobs:
           node-version: '18'
           cache: 'yarn'
           cache-dependency-path: '**/yarn.lock'
-        
-      - name: Setup yarn
-        run: |
-          npm -g install yarn
 
       - name: Install go
         uses: actions/setup-go@v4
